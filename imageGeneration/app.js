@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMNI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 app.post("/generate", async (req, res) => {
   const { prompt } = req.body;
